@@ -3,13 +3,19 @@
         <title>Posts</title>
     </head>
     <body>
-    <p>Hey There!</p>
-    <p>It works!</p>
+        <div style="font-family:Roboto">
+            <div align="left"><h1><a href="/">logo_180x40.jpg</a></h1></div>
+            {% for post in posts %}
+            <div align="center">
+            <p>___________________________</p>
+                <p>published at: {{ post.created_date }} by {{ post.author }}</p>
+                <h2>{{ post.title }}</h2>
+                    {{ post.text | linebreaks }}
+                    <p>___________________________</p>
 
-
-
-
-
+            </div>
+            {% endfor %}
+        </div>
     </body>
 
 </html>
