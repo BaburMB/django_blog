@@ -1,20 +1,31 @@
+{% load staticfiles %}
 <html>
     <head>
         <title>Posts</title>
+
+        <link rel="stylesheet" href="{% static 'css/steles.css' %}">
+
     </head>
     <body>
-        <div style="font-family:Roboto">
-            <div align="left"><h1><a href="/">logo_180x40.jpg</a></h1></div>
-            {% for post in posts %}
-            <div align="center">
-            <p>___________________________</p>
-                <p>published at: {{ post.created_date }} by {{ post.author }}</p>
-                <h2>{{ post.title }}</h2>
-                    {{ post.text | linebreaks }}
-                    <p>___________________________</p>
 
-            </div>
+        <div  style="font-family:Roboto">
+
+            <div align="left" class="logo-text">
+                <h1><a href="/">logo_180x40.jpg</a></h1>
+            </div >
+        <div class="col-md-8">
+            {% for post in posts %}
+            <div class="post">
+
+                <div class="publication_date">published at: {{ post.created_date }} by {{ post.author }}</div>
+                <h2 class="post_title">{{ post.title }}</h2>
+
+                    <div class="post_text">{{ post.text | linebreaks }}</div>
+
+                </div>
             {% endfor %}
+            </div>
+
         </div>
     </body>
 
