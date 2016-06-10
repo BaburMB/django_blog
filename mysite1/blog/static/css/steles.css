@@ -10,9 +10,13 @@
         background-color: #326994;
         margin-top: 0;
         padding: 20px 20px 20px 40px;
-        font-family: "Ubuntu Light";
+        font-family: "Roboto Condensed Light";
         color: #ffffff;
         width: 100%;
+ }
+
+ .logo_image{
+     float: right;
  }
 
  .publication_date{
@@ -22,7 +26,8 @@
 
  .post_text{
      color: #000;
-     font-weight: bolder;
+     padding-left:10px;
+     padding-right: 10px;
  }
 
  .post{
