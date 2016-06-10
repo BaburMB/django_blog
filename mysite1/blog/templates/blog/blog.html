@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Posts</title>
+
+        <link rel="stylesheet" href="{% static 'css/steles.css' %}">
+
+    </head>
+    <body>
+
+        <div  style="font-family:Roboto">
+
+            <div align="left" class="logo-text">
+                <h1><a href="/">AUTO_BLOG</a></h1>
+            </div >
+{#        <div class="logo_image">#}
+{#            <img scr="/../static/media/wheel_logo.png" alt="logo">#}
+{#        </div>#}
+        <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+
+        </div>
+    </body>
+
+</html>

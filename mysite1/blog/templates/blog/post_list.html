@@ -1,20 +1,6 @@
-{% load staticfiles %}
-<html>
-    <head>
-        <title>Posts</title>
-
-        <link rel="stylesheet" href="{% static 'css/steles.css' %}">
-
-    </head>
-    <body>
-
-        <div  style="font-family:Roboto">
-
-            <div align="left" class="logo-text">
-                <h1><a href="/">logo_180x40.jpg</a></h1>
-            </div >
-        <div class="col-md-8">
-            {% for post in posts %}
+{% extends 'blog/blog.html'%}
+{% block content %}
+{% for post in posts %}
             <div class="post">
 
                 <div class="publication_date">published at: {{ post.created_date }} by {{ post.author }}</div>
@@ -24,9 +10,4 @@
 
                 </div>
             {% endfor %}
-            </div>
-
-        </div>
-    </body>
-
-</html>
+{%  endblock content %}
