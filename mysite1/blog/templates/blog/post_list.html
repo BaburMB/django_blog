@@ -1,13 +1,17 @@
 {% extends 'blog/blog.html'%}
 {% block content %}
+    Info:
+    <div class="tweet-right"><blockquote class="twitter-tweet" data-lang="ru"><p lang="en" dir="ltr"><a href="https://t.co/6g2kIQlwwR">https://t.co/6g2kIQlwwR</a></p> Django (@djangoproject) <a href="https://twitter.com/djangoproject/status/739248927778689024">5 июня 2016 г.</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 {% for post in posts %}
             <div class="post">
 
                 <div class="publication_date">published at: {{ post.created_date }} by {{ post.author }}</div>
-                <h2 class="post_title">{{ post.title }}</h2>
+                <h2 class="post_title"><a href="{% url 'post:post_detail' pk=post.id %}">{{ post.title }}</a></h2>
 
                     <div class="post_text">{{ post.text | linebreaks }}</div>
 
                 </div>
             {% endfor %}
 {%  endblock content %}
+{#{% url 'post_detail' pk=post.pk %}#}
